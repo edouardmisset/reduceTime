@@ -1,0 +1,100 @@
+/* Table of content
+
+  0. Global variables
+
+  1. Global styles
+
+  2. typography
+
+  3. Layout
+
+  4. Components
+
+*/
+
+/* ================
+  Global variables
+  ================*/
+:root {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Verdana, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+
+  --text-primary: hsl(0, 0%, 85%, 0.8);
+  --text-secondary: hsla(0, 0%, 90%);
+
+  --bg-primary: hsla(0, 0%, 15%, 0.9);
+  --bg-secondary: hsl(0, 0%, 10%);
+
+  --accentColor: hsl(293, 62%, 65%, 90%);
+  --transition-speed: 300ms;
+
+  --red1: hsl(304, 50%, 55%);
+  --red2: hsl(0, 90%, 41%);
+  --green1: hsl(79, 52%, 56%);
+  --green2: hsl(136, 41%, 53%);
+  --yellow0: hsl(15, 75%, 81%);
+  --yellow1: hsl(25, 85%, 70%);
+  --yellow2: hsl(45, 99%, 51%);
+  --solar: hsl(35, 54%, 78%);
+  --blue1: hsl(210, 100%, 74%);
+  --blue2: hsl(210, 92%, 67%);
+  --blue3: hsl(210, 84%, 59%);
+
+  --grey0: hsl(0, 0%, 90%);
+  --grey1: hsl(0, 0%, 75%);
+  --grey2: hsl(0, 0%, 55%);
+  --grey3: hsl(0, 0%, 35%);
+  --grey4: hsl(0, 0%, 25%);
+  --grey5: hsl(0, 0%, 15%);
+  --grey6: hsl(0, 0%, 5%);
+}
+
+/* ================
+  Global styles
+  ================*/
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
+
+/* ================
+  Typography
+  ================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* ================
+  Layout
+  ================*/
+/* Small screens */
+@media only screen and (max-width: 600px) {
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+}
+
+/* ================
+  Components
+  ================*/
+p {
+  line-height: 1.5;
+  word-break: break-word;
+  text-align: justify; /* Justifies text */
+  hyphens: auto; /* Hypenation on auto */
+  max-width: 60ch; /* max width of a paragraph should be around 60 characters */
+}
+
+h1 + p:first-letter {
+  font-size: 2em;
+  line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */
+}
