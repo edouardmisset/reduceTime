@@ -28,5 +28,3 @@ minutes = Math.floor((totalSeconds - hours * 3600) / 60);
 seconds = totalSeconds % 60;
 
 console.log(`${hours}:${minutes}:${seconds}`);
-
-// .map((seconds) => `${seconds / 60}:${seconds % 60}`)
